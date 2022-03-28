@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<a href="/home/adduser">Add User</a>
+<br/>
+<br/>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <td><b>User</b></td>
+                <td><b>Country</b></td>
+            </tr>
+        </thead>
+        @foreach (var user in ViewBag.Users)
+        {
+            <tr>
+                <td>@Html.Raw(user.Name)</td>
+                <td>@Html.Raw(user.Country)</td>
+            </tr>
+        }
+    </table>
+</div>

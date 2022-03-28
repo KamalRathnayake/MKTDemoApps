@@ -1,0 +1,18 @@
+﻿@model UsersApp.Controllers.User
+@{
+    ViewData["Title"] = "AddUser";
+}
+
+<h1>Add User</h1>
+
+<form asp-action="AddUser" method="post" asp-controller="Home">
+  <div class="form-group">
+    <label asp-for="Name">Name</label>
+    <input asp-for="Name" type="text" class="form-control" id="name" aria-describedby="emailHelp" placeholder="Enter name">
+  </div>
+  <div class="form-group">
+    <label asp-for="Country">Country</label>
+    <input asp-for="Country" type="text" class="form-control" id="country" aria-describedby="emailHelp" placeholder="Enter country">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
